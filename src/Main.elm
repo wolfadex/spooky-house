@@ -26,10 +26,10 @@ main =
                 "Your basic home kitchen. Fridge, stove, sink. Not much else to say."
                 game2
 
-        ( dinningLivingRoom, game4 ) =
+        ( diningLivingRoom, game4 ) =
             Game.addRoom
-                "Dinning & Living Room"
-                "A classic combintation living room and dinning room space. There's a TV in one corner and a shelf of statues along another wall."
+                "Dining & Living Room"
+                "A classic combintation living room and dining room space. There's a TV in one corner and a shelf of statues along another wall."
                 game3
 
         ( mudRoom, game5 ) =
@@ -53,7 +53,7 @@ main =
         ( altMasterBedroom, game8) =
             Game.addRoom
                 "Alt Master Bedroom"
-                "A large, spacious bedroom. There's a large four-poster bed. It's ornate mahogany posts lead up to an emeraled canopy. The walls are a deep red, there are windows to your right high up on the wall, and a large closet across the room. Left of the closet is a door leading out of the room."
+                "A large, spacious bedroom. There's a large four-poster bed. It's ornate mahogany posts lead up to an emerald canopy. The walls are a deep red, there are windows to your right high up on the wall, and a large closet across the room. Left of the closet is a door leading out of the room."
                 game7
 
         ( altBedroomHallway, game9 ) =
@@ -114,13 +114,13 @@ main =
             }
         |> Game.addConnection
             { from = kitchen
-            , to = dinningLivingRoom
+            , to = diningLivingRoom
             , name = "Kitchen to Living Room"
             , description = "A simple entryway"
             , message = "You walk into the living room."
             }
         |> Game.addConnection
-            { from = dinningLivingRoom
+            { from = diningLivingRoom
             , to = kitchen
             , name = "Living Room to Kitchen"
             , description = "A simple entryway"
@@ -141,18 +141,18 @@ main =
             , message = "You walk into the kitchen."
             }
         |> Game.addConnection
-            { from = dinningLivingRoom
+            { from = diningLivingRoom
             , to = mudRoom
-            , name = "Dinning Room to Mud Room"
+            , name = "Dining Room to Mud Room"
             , description = "A simple entryway"
             , message = "You walk into the mud room."
             }
         |> Game.addConnection
             { from = mudRoom
-            , to = dinningLivingRoom
-            , name = "Mud Room to Dinning Room"
+            , to = diningLivingRoom
+            , name = "Mud Room to Dining Room"
             , description = "A simple entryway"
-            , message = "You walk into the dinning room."
+            , message = "You walk into the dining room."
             }
         |> Game.addConnection
             { from = mudRoom
@@ -270,7 +270,7 @@ It then barks and pushed you back through the alt house, and back through the tu
                 else 
                     ( g, "You look at the statue of your favorite dog. It warms your heart." )
             )
-        |> Game.addItemToRoom dinningLivingRoom
+        |> Game.addItemToRoom diningLivingRoom
         |> Game.createTool
             "Cat Statue"
             "A statue of a hideous looking cat."
