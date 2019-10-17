@@ -261,7 +261,7 @@ main =
                         |> Game.endGame
                             """The now live dog grabs the cat statue and smashes it to tiny pieces.
 
-It then barks and pushed you back through the alt house, and back through the tunnel. As you emerge on the other side the opening to the tunnel snaps shut. There's no sign that it was ever there."""
+It then barks and pushes you back through the alt house, and back through the tunnel. As you emerge on the other side the opening to the tunnel snaps shut. There's no sign that it was ever there."""
                     , "The statue suddenly bursts to life!"
                     )
                 else if List.any ((==) (Game.getCurrentRoom g)) altRooms then
